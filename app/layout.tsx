@@ -177,10 +177,14 @@ export default function RootLayout({
         <meta name="yandex-verification" content="c0d972ae0399894f" />
         <script
           type="application/ld+json"
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: SEO JSON-LD
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-                <script
+
+      </head>
+      <body className="font-sans antialiased min-h-screen flex flex-col bg-background text-foreground">
+        {children}
+        {process.env.NODE_ENV === "production" && <Analytics />}
+                        <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -193,10 +197,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className="font-sans antialiased min-h-screen flex flex-col bg-background text-foreground">
-        {children}
-        {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
   )
