@@ -176,6 +176,7 @@ export default function RootLayout({
         <meta name="referrer" content="origin-when-cross-origin" />
         <meta name="rating" content="adult" />
         <meta name="age" content="18+" />
+        <meta name="yandex-verification" content="c0d972ae0399894f" />
         <script
           type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: SEO JSON-LD
