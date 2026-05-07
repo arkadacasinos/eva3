@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-icon.jpg", sizes: "180x180", type: "image/jpeg" }],
   },
   verification: {
-    yandex: "", 
+    yandex: "5fdb9bf4bbf89b9b", 
   },
   generator: "v0.app",
 }
