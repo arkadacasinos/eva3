@@ -145,6 +145,7 @@ export default function RootLayout({
     `,
   }}
 />
+        <meta name="google-site-verification" content="GxvU_qp3WTvZv4qUXak773rxPN_7pR9_Z-6nh5wfiaQ" />
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col bg-background text-foreground">
         {children}
