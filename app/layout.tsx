@@ -20,7 +20,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://evacasino.app"
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Eva Casino — официальный сайт онлайн казино | Ева казино зеркало",
+    default: "Eva Casino - официальный сайт онлайн казино | Ева казино зеркало",
     template: "%s | Eva Casino",
   },
   description:
